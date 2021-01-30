@@ -9,8 +9,6 @@ from itertools import chain
 vocab = open('file1.txt').read().split("\n")
 gold = open('file2.txt').read().split("\n")
 
-"""vocab=['ketab khaneh','danesh gah']
-gold=['ketab khaneh','dan esh gah']"""
 
 tp=0
 array1=[]
