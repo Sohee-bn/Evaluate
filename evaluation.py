@@ -3,11 +3,10 @@
 
 # In[ ]:
 
-
 from itertools import chain
 
-vocab = open('file1.txt').read().split("\n")
-gold = open('file2.txt').read().split("\n")
+vocab = open('gold.txt').read().split("\n")
+gold = open('10000.txt').read().split("\n")
 
 
 tp=0
@@ -71,15 +70,3 @@ precision_segmentation=sum(array6)/len(vocab)
 print("recall of segment=",sum(array6),"/",len(vocab),"=",precision_segmentation)
 
 print("F-measure of segment=",2*precision_segmentation*recall_segmentation/(recall_segmentation+precision_segmentation))
-
-print("F-measure of morpheme=",2*precision_morpheme*recall_morpheme/(recall_morpheme+precision_morpheme))
-
-print("\n-----------------segmentation evaluation---------------")
-recall_segmentation=sum(array6)/len(gold)
-print("recall of morpheme=",sum(array6),"/",len(gold),"=",recall_segmentation)
-
-precision_segmentation=sum(array6)/len(vocab)
-print("recall of morpheme=",sum(array6),"/",len(vocab),"=",precision_segmentation)
-
-print("F-measure of segmentation=",2*precision_segmentation*recall_segmentation/(recall_segmentation+precision_segmentation))
-
